@@ -9,9 +9,7 @@
 
   <name>hibernate-intro</name>
   <url>http://maven.apache.org</url>
-  <description>
-    This project demonstrates some basic features of Hibernate ORM framework.
-  </description>
+  <description>This project demonstrates some basic features of Hibernate ORM framework</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

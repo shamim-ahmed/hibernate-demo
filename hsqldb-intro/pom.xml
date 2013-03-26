@@ -9,9 +9,7 @@
 
   <name>hsqldb-intro</name>
   <url>http://maven.apache.org</url>
-  <description>
-    This project uses hsqldb in conjunction with Hibernate
-  </description>
+  <description>This project uses hsqldb in conjunction with Hibernate</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
