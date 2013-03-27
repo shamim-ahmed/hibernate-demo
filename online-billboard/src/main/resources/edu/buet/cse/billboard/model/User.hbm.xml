@@ -3,5 +3,12 @@
           "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  
+  <class name="edu.buet.cse.billboard.model.User" table="User">
+    <id name="id" column="id">
+      <generator class="increment"/>
+    </id>
+    
+    <property name="name" column="name" type="string" />
+    <property name="password" column="password" type="string" />
+  </class>
 </hibernate-mapping>

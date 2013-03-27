@@ -1,4 +1,3 @@
-DROP TABLE Advert_Category;
 DROP TABLE Category;
 DROP TABLE Advert;
 DROP TABLE Phone;
