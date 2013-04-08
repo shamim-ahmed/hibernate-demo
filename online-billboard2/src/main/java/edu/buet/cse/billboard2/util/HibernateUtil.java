@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
   private static final SessionFactory sessionFactory;
+  private static final ThreadLocal<Session> sessionContainer = new ThreadLocal<>();
   
   static {
 	try {
@@ -17,11 +18,24 @@ public class HibernateUtil {
 	}
   }
   
-  public static Session getSession() {
-	return sessionFactory.openSession();
+  public synchronized static Session getSession() {
+	Session session = sessionContainer.get();
+	
+	if (session == null) {
+	  session = sessionFactory.openSession();
+	  sessionContainer.set(session);
+	}
+	
+	return session;
   }
   
-  public static void cleanUp() {
+  public synchronized static void cleanUp() {
+	Session session = sessionContainer.get();
+	
+	if (session != null) {
+	  session.close();
+	}
+	
 	sessionFactory.close();
   }
   
