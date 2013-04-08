@@ -1,5 +1,6 @@
 package edu.buet.cse.billboard.dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -18,6 +19,48 @@ public class UserDao {
 	tx.commit();
 	
 	return user;
+  }
+  
+  public static boolean saveUser(User user) {
+	if (user == null) {
+	  return false;
+	}
+	
+	boolean result = false;
+	Transaction tx = null;
+	
+	try {
+	  Session session = HibernateUtil.getSession();
+	  tx = session.beginTransaction();
+	  session.save(user);
+	  tx.commit();
+	  result = true;
+	} catch (HibernateException ex) {
+	  tx.rollback();
+	} 
+	
+	return result;
+  }
+  
+  public boolean deleteUser(User user) {
+	if (user == null) {
+	  return false;
+	}
+	
+	boolean result = false;
+	Transaction tx = null;
+	
+	try {
+	  Session session = HibernateUtil.getSession();
+	  tx = session.beginTransaction();
+	  session.delete(user);
+	  tx.commit();
+	  result = true;
+	} catch (HibernateException ex) {
+	  tx.rollback();
+	} 
+	
+	return result;
   }
   
   private UserDao() {
