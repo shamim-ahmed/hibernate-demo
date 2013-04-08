@@ -1,5 +1,6 @@
 package edu.buet.cse.billboard.v2.dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -7,19 +8,77 @@ import edu.buet.cse.billboard.v2.model.User;
 import edu.buet.cse.billboard.v2.util.HibernateUtil;
 
 public class UserDao {
-  public static User getUser(Long id) {
+  public User getUser(Long id) {
 	if (id == null) {
 	  return null;
 	}
-	
-	Session session = HibernateUtil.getSession();
-	Transaction tx = session.beginTransaction();
-	User user = (User) session.get(User.class, id);
-	tx.commit();
-	
+
+	Transaction tx = null;
+	User user = null;
+
+	try {
+	  Session session = HibernateUtil.getSession();
+	  tx = session.beginTransaction();
+	  user = (User) session.get(User.class, id);
+	  tx.commit();
+	} catch (HibernateException ex) {
+	  ex.printStackTrace(System.err);
+
+	  if (tx != null) {
+		tx.rollback();
+	  }
+	}
+
 	return user;
   }
-  
-  private UserDao() {
+
+  public boolean saveUser(User user) {
+	if (user == null) {
+	  return false;
+	}
+
+	boolean result = false;
+	Transaction tx = null;
+
+	try {
+	  Session session = HibernateUtil.getSession();
+	  tx = session.beginTransaction();
+	  session.save(user);
+	  tx.commit();
+	  result = true;
+	} catch (HibernateException ex) {
+	  ex.printStackTrace(System.err);
+
+	  if (tx != null) {
+		tx.rollback();
+	  }
+	}
+
+	return result;
+  }
+
+  public boolean deleteUser(User user) {
+	if (user == null) {
+	  return false;
+	}
+
+	boolean result = false;
+	Transaction tx = null;
+
+	try {
+	  Session session = HibernateUtil.getSession();
+	  tx = session.beginTransaction();
+	  session.delete(user);
+	  tx.commit();
+	  result = true;
+	} catch (HibernateException ex) {
+	  ex.printStackTrace(System.err);
+
+	  if (tx != null) {
+		tx.rollback();
+	  }
+	}
+
+	return result;
   }
 }
