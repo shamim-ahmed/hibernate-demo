@@ -14,5 +14,6 @@
     
     <mapping class="edu.buet.cse.bookshop.v2.model.Book" />
     <mapping class="edu.buet.cse.bookshop.v2.model.Publisher"/>
+    <mapping class="edu.buet.cse.bookshop.v2.model.Author"/>
   </session-factory>
 </hibernate-configuration>
