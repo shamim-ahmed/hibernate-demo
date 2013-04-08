@@ -1,4 +1,4 @@
-package edu.buet.cse.billboard2.model;
+package edu.buet.cse.billboard.v2.model;
 
 import java.util.HashSet;
 import java.util.Set;

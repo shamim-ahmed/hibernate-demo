@@ -1,10 +1,10 @@
-package edu.buet.cse.billboard2.dao;
+package edu.buet.cse.billboard.v2.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.billboard2.model.Advert;
-import edu.buet.cse.billboard2.util.HibernateUtil;
+import edu.buet.cse.billboard.v2.model.Advert;
+import edu.buet.cse.billboard.v2.util.HibernateUtil;
 
 public class AdvertDao {
   public static Advert getAdvert(Long id) {

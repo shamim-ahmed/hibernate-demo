@@ -1,4 +1,4 @@
-package edu.buet.cse.billboard2.model;
+package edu.buet.cse.billboard.v2.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,22 +13,22 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 @Entity
-@Table(name = "Phone")
-public class Phone {
+@Table(name = "Advert")
+public class Advert {
   @Id
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   
+  @Column(name = "title", nullable = false)
+  private String title;
+  
+  @Column(name = "message", nullable = false)
+  private String message;
+  
   @ManyToOne
   @JoinColumn(name = "user_id")
   private User user;
-  
-  @Column(name = "number", nullable = false)
-  private String number;
-  
-  @Column(name = "comment", nullable = false)
-  private String comment;
 
   public Long getId() {
 	return id;
@@ -38,6 +38,22 @@ public class Phone {
 	this.id = id;
   }
 
+  public String getTitle() {
+	return title;
+  }
+
+  public void setTitle(String title) {
+	this.title = title;
+  }
+
+  public String getMessage() {
+	return message;
+  }
+
+  public void setMessage(String message) {
+	this.message = message;
+  }
+
   public User getUser() {
 	return user;
   }
@@ -45,30 +61,14 @@ public class Phone {
   public void setUser(User user) {
 	this.user = user;
   }
-
-  public String getNumber() {
-	return number;
-  }
-
-  public void setNumber(String number) {
-	this.number = number;
-  }
-
-  public String getComment() {
-	return comment;
-  }
-
-  public void setComment(String comment) {
-	this.comment = comment;
-  }
   
   @Override
   public String toString() {
 	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
 	builder.append("id", id)
-	       .append("username", user.getName())
-	       .append("number", number)
-	       .append("comment", comment);
+	       .append("title", title)
+	       .append("message", message)
+	       .append("username", user.getName());
 	
 	return builder.toString();
   }

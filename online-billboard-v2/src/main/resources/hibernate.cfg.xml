@@ -11,9 +11,9 @@
     <property name="hibernate.default_schema">pro_hibernate3_db</property>
     <property name="show_sql">true</property>
 
-    <mapping class="edu.buet.cse.billboard2.model.User" />
-    <mapping class="edu.buet.cse.billboard2.model.Phone" />
-    <mapping class="edu.buet.cse.billboard2.model.Category" />
-    <mapping class="edu.buet.cse.billboard2.model.Advert" />
+    <mapping class="edu.buet.cse.billboard.v2.model.User" />
+    <mapping class="edu.buet.cse.billboard.v2.model.Phone" />
+    <mapping class="edu.buet.cse.billboard.v2.model.Category" />
+    <mapping class="edu.buet.cse.billboard.v2.model.Advert" />
   </session-factory>
 </hibernate-configuration>
