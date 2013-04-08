@@ -1,4 +1,4 @@
-package edu.buet.cse.bookshop.model;
+package edu.buet.cse.bookshop.v1.model;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;

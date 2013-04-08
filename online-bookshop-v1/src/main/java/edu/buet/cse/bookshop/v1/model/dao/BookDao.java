@@ -1,11 +1,11 @@
-package edu.buet.cse.bookshop.model.dao;
+package edu.buet.cse.bookshop.v1.model.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.bookshop.model.Book;
-import edu.buet.cse.bookshop.util.HibernateUtil;
+import edu.buet.cse.bookshop.v1.model.Book;
+import edu.buet.cse.bookshop.v1.util.HibernateUtil;
 
 public class BookDao {
   public Book getBook(Long id) {

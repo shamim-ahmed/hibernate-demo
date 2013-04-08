@@ -1,8 +1,8 @@
-package edu.buet.cse.bookshop;
+package edu.buet.cse.bookshop.v1;
 
-import edu.buet.cse.bookshop.model.Book;
-import edu.buet.cse.bookshop.model.dao.BookDao;
-import edu.buet.cse.bookshop.util.HibernateUtil;
+import edu.buet.cse.bookshop.v1.model.Book;
+import edu.buet.cse.bookshop.v1.model.dao.BookDao;
+import edu.buet.cse.bookshop.v1.util.HibernateUtil;
 
 public class App {
   public static void main(String[] args) {

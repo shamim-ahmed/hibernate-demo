@@ -1,4 +1,4 @@
-package edu.buet.cse.bookshop.util;
+package edu.buet.cse.bookshop.v1.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
