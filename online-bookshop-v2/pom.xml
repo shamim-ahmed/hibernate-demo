@@ -9,8 +9,8 @@
 
   <name>online-bookshop-v2</name>
   <url>http://maven.apache.org</url>
-  <description>This project demonstrates how to use the @SecondaryTable annotation as an alternative to one-to-one mapping</description>
-
+  <description>This project demonstrates how to use multiple type of mappings (one-to-one and one-to-many) within the same entity.</description>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <hibernate.version>3.6.3.Final</hibernate.version>
