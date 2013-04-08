@@ -9,6 +9,7 @@
 
   <name>online-bookshop-v1</name>
   <url>http://maven.apache.org</url>
+  <description>This project demonstrates how to use the @SecondaryTable annotation as an alternative to one-to-one mapping</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
