@@ -2,17 +2,18 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
   								  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
-		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pro_hibernate3_db</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">admin</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hibernate.default_schema">pro_hibernate3_db</property>
-		<property name="show_sql">true</property>
-		<mapping resource="edu/buet/cse/billboard/model/Advert.hbm.xml"/>
-		<mapping resource="edu/buet/cse/billboard/model/Category.hbm.xml"/>
-		<mapping resource="edu/buet/cse/billboard/model/Phone.hbm.xml"/>
-		<mapping resource="edu/buet/cse/billboard/model/User.hbm.xml"/>
-	</session-factory>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pro_hibernate3_db</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">admin</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.default_schema">pro_hibernate3_db</property>
+    <property name="show_sql">true</property>
+
+    <mapping resource="edu/buet/cse/billboard/model/Advert.hbm.xml" />
+    <mapping resource="edu/buet/cse/billboard/model/Category.hbm.xml" />
+    <mapping resource="edu/buet/cse/billboard/model/Phone.hbm.xml" />
+    <mapping resource="edu/buet/cse/billboard/model/User.hbm.xml" />
+  </session-factory>
 </hibernate-configuration>

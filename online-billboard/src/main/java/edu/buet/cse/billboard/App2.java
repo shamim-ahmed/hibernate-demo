@@ -4,10 +4,10 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.billboard.model.User;
+import edu.buet.cse.billboard.model.Phone;
 import edu.buet.cse.billboard.util.HibernateUtil;
 
-public class App {
+public class App2 {
   public static void main(String[] args) {
 	Session session = null;
 	
@@ -15,10 +15,10 @@ public class App {
 	  session = HibernateUtil.getSession();
 	  
 	  Transaction tx = session.beginTransaction();
-	  User user = (User) session.get(User.class, 1L);
+	  Phone phone = (Phone) session.get(Phone.class, 1L);
 	  tx.commit();
 	  
-	  System.out.println(user);
+	  System.out.println(phone);
 	} catch (HibernateException ex) {
 	  ex.printStackTrace(System.err);
 	}

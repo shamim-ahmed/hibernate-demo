@@ -1,20 +1,13 @@
 package edu.buet.cse.billboard.model;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class Phone {
   private Long id;
   private User user;
   private String number;
   private String comment;
-
-  protected Phone() {
-  }
-
-  public Phone(Long id, User user, String number, String comment) {
-	this.id = id;
-	this.user = user;
-	this.number = number;
-	this.comment = comment;
-  }
 
   public Long getId() {
 	return id;
@@ -46,5 +39,16 @@ public class Phone {
 
   public void setComment(String comment) {
 	this.comment = comment;
+  }
+  
+  @Override
+  public String toString() {
+	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+	builder.append("id", id)
+	       .append("username", user.getName())
+	       .append("number", number)
+	       .append("comment", comment);
+	
+	return builder.toString();
   }
 }
