@@ -1,26 +1,16 @@
 package edu.buet.cse.billboard2;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
+import edu.buet.cse.billboard2.dao.CategoryDao;
 import edu.buet.cse.billboard2.model.Category;
 import edu.buet.cse.billboard2.util.HibernateUtil;
 
 public class App3 {
-  public static void main(String[] args) {
-	Session session = null;
-	
+  public static void main(String[] args) {	
 	try {
-	  session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Category category = (Category) session.get(Category.class, 1L);
-	  tx.commit();
-	  
+	  Category category = CategoryDao.getCategory(1L);	  
 	  System.out.println(category);
-	} catch (HibernateException ex) {
-	  ex.printStackTrace(System.err);
+	} finally {
+	  HibernateUtil.cleanUp();
 	}
   }
 }
