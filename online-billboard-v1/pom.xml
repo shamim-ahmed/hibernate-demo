@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.buet.cse</groupId>
-  <artifactId>online-billboard</artifactId>
+  <artifactId>online-billboard-v1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>online-billboard</name>
+  <name>online-billboard-v1</name>
   <url>http://maven.apache.org</url>
   <description>This is a more elaborate example using Hibernate. One-to-many and many-to-many mappings are implemented in the context of an online billboard domain.</description>
 

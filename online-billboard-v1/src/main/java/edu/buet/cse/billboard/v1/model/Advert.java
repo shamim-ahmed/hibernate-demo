@@ -1,15 +1,13 @@
-package edu.buet.cse.billboard.model;
-
-import java.util.HashSet;
-import java.util.Set;
+package edu.buet.cse.billboard.v1.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class Category {
+public class Advert {
   private Long id;
   private String title;
-  private Set<Advert> adverts = new HashSet<>();
+  private String message;
+  private User user;
 
   public Long getId() {
 	return id;
@@ -27,12 +25,20 @@ public class Category {
 	this.title = title;
   }
 
-  public Set<Advert> getAdverts() {
-	return adverts;
+  public String getMessage() {
+	return message;
   }
 
-  public void setAdverts(Set<Advert> adverts) {
-	this.adverts = adverts;
+  public void setMessage(String message) {
+	this.message = message;
+  }
+
+  public User getUser() {
+	return user;
+  }
+
+  public void setUser(User user) {
+	this.user = user;
   }
   
   @Override
@@ -40,7 +46,8 @@ public class Category {
 	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
 	builder.append("id", id)
 	       .append("title", title)
-	       .append("advertCount", adverts.size());
+	       .append("message", message)
+	       .append("username", user.getName());
 	
 	return builder.toString();
   }

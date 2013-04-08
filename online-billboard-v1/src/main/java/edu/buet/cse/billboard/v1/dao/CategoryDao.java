@@ -1,11 +1,11 @@
-package edu.buet.cse.billboard.dao;
+package edu.buet.cse.billboard.v1.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.billboard.model.Category;
-import edu.buet.cse.billboard.util.HibernateUtil;
+import edu.buet.cse.billboard.v1.model.Category;
+import edu.buet.cse.billboard.v1.util.HibernateUtil;
 
 public class CategoryDao {
   public Category getCategory(Long id) {

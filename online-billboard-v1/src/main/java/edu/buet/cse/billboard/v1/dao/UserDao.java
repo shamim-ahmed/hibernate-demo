@@ -1,25 +1,25 @@
-package edu.buet.cse.billboard.dao;
+package edu.buet.cse.billboard.v1.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.billboard.model.Advert;
-import edu.buet.cse.billboard.util.HibernateUtil;
+import edu.buet.cse.billboard.v1.model.User;
+import edu.buet.cse.billboard.v1.util.HibernateUtil;
 
-public class AdvertDao {
-  public Advert getAdvert(Long id) {
+public class UserDao {
+  public User getUser(Long id) {
 	if (id == null) {
 	  return null;
 	}
 
-	Advert advert = null;
 	Transaction tx = null;
+	User user = null;
 
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  advert = (Advert) session.get(Advert.class, id);
+	  user = (User) session.get(User.class, id);
 	  tx.commit();
 	} catch (HibernateException ex) {
 	  ex.printStackTrace(System.err);
@@ -29,11 +29,11 @@ public class AdvertDao {
 	  }
 	}
 
-	return advert;
+	return user;
   }
 
-  public boolean saveAdvert(Advert advert) {
-	if (advert == null) {
+  public boolean saveUser(User user) {
+	if (user == null) {
 	  return false;
 	}
 
@@ -43,7 +43,7 @@ public class AdvertDao {
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  session.save(advert);
+	  session.save(user);
 	  tx.commit();
 	  result = true;
 	} catch (HibernateException ex) {
@@ -57,8 +57,8 @@ public class AdvertDao {
 	return result;
   }
 
-  public boolean deleteAdvert(Advert advert) {
-	if (advert == null) {
+  public boolean deleteUser(User user) {
+	if (user == null) {
 	  return false;
 	}
 
@@ -68,7 +68,7 @@ public class AdvertDao {
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  session.delete(advert);
+	  session.delete(user);
 	  tx.commit();
 	  result = true;
 	} catch (HibernateException ex) {

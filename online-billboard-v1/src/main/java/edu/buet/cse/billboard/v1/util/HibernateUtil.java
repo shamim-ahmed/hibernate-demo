@@ -1,4 +1,4 @@
-package edu.buet.cse.billboard.util;
+package edu.buet.cse.billboard.v1.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

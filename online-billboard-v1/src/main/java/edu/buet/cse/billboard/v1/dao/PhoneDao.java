@@ -1,39 +1,39 @@
-package edu.buet.cse.billboard.dao;
+package edu.buet.cse.billboard.v1.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.billboard.model.User;
-import edu.buet.cse.billboard.util.HibernateUtil;
+import edu.buet.cse.billboard.v1.model.Phone;
+import edu.buet.cse.billboard.v1.util.HibernateUtil;
 
-public class UserDao {
-  public User getUser(Long id) {
+public class PhoneDao {
+  public Phone getPhone(Long id) {
 	if (id == null) {
 	  return null;
 	}
 
+	Phone phone = null;
 	Transaction tx = null;
-	User user = null;
 
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  user = (User) session.get(User.class, id);
+	  phone = (Phone) session.get(Phone.class, id);
 	  tx.commit();
 	} catch (HibernateException ex) {
 	  ex.printStackTrace(System.err);
-
+	  
 	  if (tx != null) {
 		tx.rollback();
 	  }
 	}
 
-	return user;
+	return phone;
   }
 
-  public boolean saveUser(User user) {
-	if (user == null) {
+  public boolean savePhone(Phone phone) {
+	if (phone == null) {
 	  return false;
 	}
 
@@ -43,7 +43,7 @@ public class UserDao {
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  session.save(user);
+	  session.save(phone);
 	  tx.commit();
 	  result = true;
 	} catch (HibernateException ex) {
@@ -57,8 +57,8 @@ public class UserDao {
 	return result;
   }
 
-  public boolean deleteUser(User user) {
-	if (user == null) {
+  public boolean deletePhone(Phone phone) {
+	if (phone == null) {
 	  return false;
 	}
 
@@ -68,7 +68,7 @@ public class UserDao {
 	try {
 	  Session session = HibernateUtil.getSession();
 	  tx = session.beginTransaction();
-	  session.delete(user);
+	  session.delete(phone);
 	  tx.commit();
 	  result = true;
 	} catch (HibernateException ex) {

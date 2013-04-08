@@ -3,7 +3,7 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="edu.buet.cse.billboard.model.Category" table="Category">
+  <class name="edu.buet.cse.billboard.v1.model.Category" table="Category">
     <id name="id" column="id" type="long">
       <generator class="increment"/>
     </id>
@@ -15,7 +15,7 @@
         <column name="category_id" not-null="true"/>
       </key>
       
-      <many-to-many entity-name="edu.buet.cse.billboard.model.Advert">
+      <many-to-many entity-name="edu.buet.cse.billboard.v1.model.Advert">
         <column name="advert_id" not-null="true"/>
       </many-to-many>
     </set>

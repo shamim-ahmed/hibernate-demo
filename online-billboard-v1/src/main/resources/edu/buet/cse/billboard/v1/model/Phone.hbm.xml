@@ -3,7 +3,7 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="edu.buet.cse.billboard.model.Phone" table="Phone">
+  <class name="edu.buet.cse.billboard.v1.model.Phone" table="Phone">
     <id name="id" column="id" type="long">
       <generator class="increment"/>
     </id>
@@ -11,7 +11,7 @@
     <property name="number" column="number" type="string" not-null="true"/>
     <property name="comment" column="comment" type="string" not-null="false"/>
     
-    <many-to-one name="user" class="edu.buet.cse.billboard.model.User">
+    <many-to-one name="user" class="edu.buet.cse.billboard.v1.model.User">
       <column name="user_id" not-null="true"/>
     </many-to-one>
   </class> 

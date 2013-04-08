@@ -3,7 +3,7 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="edu.buet.cse.billboard.model.User" table="User">
+  <class name="edu.buet.cse.billboard.v1.model.User" table="User">
     <id name="id" column="id" type="long">
       <generator class="increment"/>
     </id>

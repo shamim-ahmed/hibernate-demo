@@ -1,8 +1,8 @@
-package edu.buet.cse.billboard;
+package edu.buet.cse.billboard.v1;
 
-import edu.buet.cse.billboard.dao.CategoryDao;
-import edu.buet.cse.billboard.model.Category;
-import edu.buet.cse.billboard.util.HibernateUtil;
+import edu.buet.cse.billboard.v1.dao.CategoryDao;
+import edu.buet.cse.billboard.v1.model.Category;
+import edu.buet.cse.billboard.v1.util.HibernateUtil;
 
 public class App3 {
   public static void main(String[] args) {	

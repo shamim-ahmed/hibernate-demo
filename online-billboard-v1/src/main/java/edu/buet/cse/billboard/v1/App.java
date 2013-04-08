@@ -1,8 +1,8 @@
-package edu.buet.cse.billboard;
+package edu.buet.cse.billboard.v1;
 
-import edu.buet.cse.billboard.dao.UserDao;
-import edu.buet.cse.billboard.model.User;
-import edu.buet.cse.billboard.util.HibernateUtil;
+import edu.buet.cse.billboard.v1.dao.UserDao;
+import edu.buet.cse.billboard.v1.model.User;
+import edu.buet.cse.billboard.v1.util.HibernateUtil;
 
 public class App {
   public static void main(String[] args) {

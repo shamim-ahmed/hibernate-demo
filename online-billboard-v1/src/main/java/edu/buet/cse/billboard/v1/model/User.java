@@ -1,4 +1,4 @@
-package edu.buet.cse.billboard.model;
+package edu.buet.cse.billboard.v1.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
