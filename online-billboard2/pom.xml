@@ -9,8 +9,10 @@
 
   <name>online-billboard2</name>
   <url>http://maven.apache.org</url>
-  <description>This is a more elaborate example using Hibernate. One-to-many and many-to-many mappings
-are implemented in the context of an online billboard domain. The mappings are implemented using Hibernate annotations.</description>
+  <description>
+    This is a more elaborate example using Hibernate. One-to-many and many-to-many mappings are implemented 
+    in the context of an online billboard domain. The mappings are implemented using Hibernate annotations.
+  </description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
