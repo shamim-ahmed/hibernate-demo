@@ -9,13 +9,18 @@ import edu.buet.cse.hibernate.model.Motd;
 public class App {
   public static void main(String[] args) {
 	SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-	Session session = sessionFactory.openSession();
+	Session session = null;
 
 	try {
+	  session = sessionFactory.openSession();
 	  Motd messageOfDay = (Motd) session.get(Motd.class, 1L);
 	  System.out.println(messageOfDay);
 	} finally {
-	  session.close();
+	  if (session != null) {
+		session.close();
+	  }
+	  
+	  sessionFactory.close();
 	}
   }
 }

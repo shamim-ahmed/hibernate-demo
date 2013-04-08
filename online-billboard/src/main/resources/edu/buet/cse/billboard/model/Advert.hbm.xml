@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
   <class name="edu.buet.cse.billboard.model.Advert" table="Advert">
     <id name="id" column="id" type="long">
-      <generator class="increment"/>
+      <generator class="increment" />
     </id>
-    
-    <property name="title" column="title" type="string" not-null="true"/>
-    <property name="message" column="message" type="string" not-null="true"/>
-    
+
+    <property name="title" column="title" type="string" not-null="true" />
+    <property name="message" column="message" type="string" not-null="true" />
+
     <many-to-one name="user" class="edu.buet.cse.billboard.model.User">
-      <column name="user_id" not-null="true"/>
+      <column name="user_id" not-null="true" />
     </many-to-one>
   </class>
 </hibernate-mapping>
