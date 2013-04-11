@@ -9,6 +9,10 @@
 
   <name>hibernate-ch06-v6</name>
   <url>http://maven.apache.org</url>
+  <description>
+    This project shows a more complex example of mapping inheritance hierarchy using Hibernate.
+    A discriminator column is used to distinguish between subclasses.
+  </description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -77,5 +81,4 @@
       </plugin>
     </plugins>
   </build>
-  <description>This project shows a more complex example of mapping inheritance hierarchy using Hibernate</description>
 </project>
