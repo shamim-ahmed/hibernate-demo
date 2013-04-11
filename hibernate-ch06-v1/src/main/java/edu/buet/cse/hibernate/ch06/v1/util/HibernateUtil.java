@@ -1,4 +1,4 @@
-package edu.buet.cse.bookshop.v2.util;
+package edu.buet.cse.hibernate.ch06.v1.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -19,15 +19,15 @@ public class HibernateUtil {
 	}
   }
   
-  public static Session getSession() {
+  public synchronized static Session getSession() {
 	return session;
   }
   
-  public static void cleanUp() {
+  public synchronized static void cleanUp() {
 	session.close();
 	sessionFactory.close();
   }
-  
+
   private HibernateUtil() {
   }
 }

@@ -7,35 +7,24 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
   private static final SessionFactory sessionFactory;
-  private static final ThreadLocal<Session> sessionContainer = new ThreadLocal<>();
+  private static final Session session;
   
   static {
 	try {
 	  sessionFactory = new Configuration().configure().buildSessionFactory();
+	  session = sessionFactory.openSession();
 	} catch (HibernateException ex) {
 	  ex.printStackTrace(System.err);
 	  throw new ExceptionInInitializerError(ex);
 	}
   }
   
-  public synchronized static Session getSession() {
-	Session session = sessionContainer.get();
-	
-	if (session == null) {
-	  session = sessionFactory.openSession();
-	  sessionContainer.set(session);
-	}
-	
+  public static Session getSession() {
 	return session;
   }
   
-  public synchronized static void cleanUp() {
-	Session session = sessionContainer.get();
-	
-	if (session != null) {
-	  session.close();
-	}
-	
+  public static void cleanUp() {
+	session.close();
 	sessionFactory.close();
   }
   
