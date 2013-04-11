@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+  <class name="edu.buet.cse.hibernate.ch06.v3.model.PropertyAdvert" table="Property_Ad">
+    <id name="id" column="id" type="long">
+      <generator class="increment"/>
+    </id>
+    
+    <property name="title" column="title" type="string" not-null="true"/>
+    <property name="state" column="state" type="string" not-null="true"/>
+    <property name="zipCode" column="zip_code" type="string" not-null="true"/>
+    <property name="description" column="description" type="string" not-null="false"/>
+  </class>
+</hibernate-mapping>
