@@ -9,7 +9,7 @@
     </id>
     
     <property name="title" column="title" type="string" not-null="true"/>
-    <property name="dateOfBirth" column="birth_day" type="date" not-null="true"/>
+    <property name="dateOfBirth" column="birth_date" type="date" not-null="true"/>
     <property name="sex" column="sex" not-null="true">
       <type name="org.hibernate.type.EnumType">
         <param name="enumClass">edu.buet.cse.hibernate.ch06.v3.model.Sex</param>

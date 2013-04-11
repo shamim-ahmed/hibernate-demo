@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Table(name = "Personal_Ad")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class PersonalAdvert extends Advert {
-  @Column(name = "birth_day", nullable = false)
+  @Column(name = "birth_date", nullable = false)
   private Date dateOfBirth;
   
   @Column(name = "sex", nullable = false)

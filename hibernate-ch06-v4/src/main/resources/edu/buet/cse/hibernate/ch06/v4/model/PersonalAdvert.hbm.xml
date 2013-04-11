@@ -8,7 +8,7 @@
                    table="Personal_Ad">
     <key column="ad_id"/>
     
-    <property name="dateOfBirth" column="birth_day" type="date" not-null="true"/>
+    <property name="dateOfBirth" column="birth_date" type="date" not-null="true"/>
     <property name="sex" not-null="true">
       <type name="org.hibernate.type.EnumType">
         <param name="enumClass">edu.buet.cse.hibernate.ch06.v4.model.Sex</param>
