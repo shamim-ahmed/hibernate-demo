@@ -9,7 +9,6 @@
 
   <name>hibernate-ch06-v4</name>
   <url>http://maven.apache.org</url>
-  <description>This project shows how to map components using Hibernate annotations.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -78,4 +77,5 @@
       </plugin>
     </plugins>
   </build>
+  <description>This project shows a more complex example of mapping inheritance hierarchy using Hibernate</description>
 </project>
