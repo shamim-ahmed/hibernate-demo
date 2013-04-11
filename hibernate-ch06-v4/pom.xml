@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.buet.cse</groupId>
-  <artifactId>hibernate-ch06-v3</artifactId>
+  <artifactId>hibernate-ch06-v4</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>hibernate-ch06-v3</name>
+  <name>hibernate-ch06-v4</name>
   <url>http://maven.apache.org</url>
-  <description>This project shows a simple example of mapping inheritance hierarchy using Hibernate annotations</description>
+  <description>This project shows how to map components using Hibernate annotations.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
