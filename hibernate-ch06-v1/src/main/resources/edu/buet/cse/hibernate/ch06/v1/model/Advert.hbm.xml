@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+  <class name="edu.buet.cse.hibernate.ch06.v1.model.Advert" table="Advert">
+    <id name="id" column="id" type="long">
+      <generator class="increment"/>
+    </id>
+    
+    <property name="title" column="title" type="string" not-null="true"/>
+    <property name="content" column="content" type="string" not-null="true"/>
+    
+    <component name="picture" class="edu.buet.cse.hibernate.ch06.v1.model.Picture">
+      <property name="caption" column="pictureCaption" type="string" not-null="true"/>
+      <property name="fileName" column="pictureFileName" type="string" not-null="true"/>
+    </component>
+  </class> 
+</hibernate-mapping>
