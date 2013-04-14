@@ -12,8 +12,8 @@
     <property name="hibernate.default_schema">pro_hibernate3_db</property>
     <property name="show_sql">true</property>
 
-    <mapping resource="edu/buet/cse/hibernate/ch07/v1/model/Product.hbm.xml" />
-    <mapping resource="edu/buet/cse/hibernate/ch07/v1/model/Software.hbm.xml" />
-    <mapping resource="edu/buet/cse/hibernate/ch07/v1/model/Supplier.hbm.xml" />
+    <mapping resource="edu/buet/cse/hibernate/ch07/model/Product.hbm.xml" />
+    <mapping resource="edu/buet/cse/hibernate/ch07/model/Software.hbm.xml" />
+    <mapping resource="edu/buet/cse/hibernate/ch07/model/Supplier.hbm.xml" />
   </session-factory>
 </hibernate-configuration>
