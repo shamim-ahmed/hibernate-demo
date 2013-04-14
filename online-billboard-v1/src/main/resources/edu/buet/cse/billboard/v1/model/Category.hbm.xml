@@ -5,18 +5,18 @@
 <hibernate-mapping>
   <class name="edu.buet.cse.billboard.v1.model.Category" table="Category">
     <id name="id" column="id" type="long">
-      <generator class="increment"/>
+      <generator class="increment" />
     </id>
-    
-    <property name="title" column="title" type="string" not-null="true"/>
-    
+
+    <property name="title" column="title" type="string" not-null="true" />
+
     <set name="adverts" table="Advert_Category" cascade="save-update">
       <key>
-        <column name="category_id" not-null="true"/>
+        <column name="category_id" not-null="true" />
       </key>
-      
+
       <many-to-many entity-name="edu.buet.cse.billboard.v1.model.Advert">
-        <column name="advert_id" not-null="true"/>
+        <column name="advert_id" not-null="true" />
       </many-to-many>
     </set>
   </class>

@@ -6,11 +6,11 @@ import edu.buet.cse.hibernate.ch06.v3.util.HibernateUtil;
 
 public class App2 {
   public static void main(String[] args) {
-	try {
-	  PropertyAdvert advert = AdvertDao.getAdvert(PropertyAdvert.class, 1L);
-	  System.out.println(advert);
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+    try {
+      PropertyAdvert advert = AdvertDao.getAdvert(PropertyAdvert.class, 1L);
+      System.out.println(advert);
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

@@ -7,21 +7,21 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
   private static final SessionFactory sessionFactory;
   private static final Session session;
-  
+
   static {
-	sessionFactory = new Configuration().configure().buildSessionFactory();
-	session = sessionFactory.openSession();
+    sessionFactory = new Configuration().configure().buildSessionFactory();
+    session = sessionFactory.openSession();
   }
-  
+
   public static Session getSession() {
-	return session;
+    return session;
   }
-  
+
   public static void cleanUp() {
-	session.close();
-	sessionFactory.close();
+    session.close();
+    sessionFactory.close();
   }
-  
+
   private HibernateUtil() {
   }
 }

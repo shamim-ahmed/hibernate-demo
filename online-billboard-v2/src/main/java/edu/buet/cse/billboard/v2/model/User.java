@@ -17,13 +17,13 @@ public class User {
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
+
   @Column(name = "name", nullable = false, unique = true)
   private String name;
-  
+
   @Column(name = "password", nullable = false)
   private String password;
-  
+
   public Long getId() {
     return id;
   }
@@ -47,13 +47,12 @@ public class User {
   public void setPassword(String password) {
     this.password = password;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("name", name)
-	       .append("password", password);
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("name", name).append("password", password);
+
+    return builder.toString();
   }
 }

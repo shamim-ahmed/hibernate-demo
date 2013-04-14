@@ -10,18 +10,18 @@ import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App15 {
   public static void main(String... args) {
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Criteria criteria = session.createCriteria(Product.class);
-	  criteria.add(Restrictions.eq("name", "Mouse"));
-	  Product product = (Product) criteria.uniqueResult();
-	  tx.commit();
-	  
-	  System.out.println(product);
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+    try {
+      Session session = HibernateUtil.getSession();
+
+      Transaction tx = session.beginTransaction();
+      Criteria criteria = session.createCriteria(Product.class);
+      criteria.add(Restrictions.eq("name", "Mouse"));
+      Product product = (Product) criteria.uniqueResult();
+      tx.commit();
+
+      System.out.println(product);
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

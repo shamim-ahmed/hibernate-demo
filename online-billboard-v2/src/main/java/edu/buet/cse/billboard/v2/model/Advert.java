@@ -19,57 +19,54 @@ public class Advert {
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
+
   @Column(name = "title", nullable = false)
   private String title;
-  
+
   @Column(name = "message", nullable = false)
   private String message;
-  
+
   @ManyToOne
   @JoinColumn(name = "user_id")
   private User user;
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getTitle() {
-	return title;
+    return title;
   }
 
   public void setTitle(String title) {
-	this.title = title;
+    this.title = title;
   }
 
   public String getMessage() {
-	return message;
+    return message;
   }
 
   public void setMessage(String message) {
-	this.message = message;
+    this.message = message;
   }
 
   public User getUser() {
-	return user;
+    return user;
   }
 
   public void setUser(User user) {
-	this.user = user;
+    this.user = user;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("title", title)
-	       .append("message", message)
-	       .append("username", user.getName());
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("title", title).append("message", message).append("username", user.getName());
+
+    return builder.toString();
   }
 }

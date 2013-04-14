@@ -1,13 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-          
+
 <hibernate-mapping>
-  <subclass name="edu.buet.cse.hibernate.ch06.v6.model.PropertyAdvert" 
-            extends="edu.buet.cse.hibernate.ch06.v6.model.Advert" 
-            discriminator-value="property">    
-    <property name="state" column="state" type="string" not-null="false"/>
-    <property name="zipCode" column="zip_code" type="string" not-null="false"/>
-    <property name="description" column="description" type="string" not-null="false"/>
+  <subclass name="edu.buet.cse.hibernate.ch06.v6.model.PropertyAdvert" extends="edu.buet.cse.hibernate.ch06.v6.model.Advert"
+    discriminator-value="property">
+    <property name="state" column="state" type="string" not-null="false" />
+    <property name="zipCode" column="zip_code" type="string" not-null="false" />
+    <property name="description" column="description" type="string" not-null="false" />
   </subclass>
 </hibernate-mapping>

@@ -11,20 +11,20 @@ import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App4 {
   public static void main(String... args) {
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Criteria criteria = session.createCriteria(Software.class);
-	  @SuppressWarnings("unchecked")
-	  List<Software> softwares = criteria.list();
-	  tx.commit();
+    try {
+      Session session = HibernateUtil.getSession();
 
-	  for (Software s : softwares) {
-		System.out.println(s);
-	  }	  
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+      Transaction tx = session.beginTransaction();
+      Criteria criteria = session.createCriteria(Software.class);
+      @SuppressWarnings("unchecked")
+      List<Software> softwares = criteria.list();
+      tx.commit();
+
+      for (Software s : softwares) {
+        System.out.println(s);
+      }
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

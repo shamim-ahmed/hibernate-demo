@@ -13,25 +13,25 @@ import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App13 {
   public static void main(String... args) {
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Criteria criteria = session.createCriteria(Product.class);
-	  Disjunction disj = Restrictions.disjunction();
-	  disj.add(Restrictions.le("price", 25.00));
-	  disj.add(Restrictions.ilike("name", "m%"));
-	  disj.add(Restrictions.isNull("description"));
-	  criteria.add(disj);
-	  @SuppressWarnings("unchecked")
-	  List<Product> products = criteria.list();
-	  tx.commit();
+    try {
+      Session session = HibernateUtil.getSession();
 
-	  for (Product p : products) {
-		System.out.println(p);
-	  }	  
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+      Transaction tx = session.beginTransaction();
+      Criteria criteria = session.createCriteria(Product.class);
+      Disjunction disj = Restrictions.disjunction();
+      disj.add(Restrictions.le("price", 25.00));
+      disj.add(Restrictions.ilike("name", "m%"));
+      disj.add(Restrictions.isNull("description"));
+      criteria.add(disj);
+      @SuppressWarnings("unchecked")
+      List<Product> products = criteria.list();
+      tx.commit();
+
+      for (Product p : products) {
+        System.out.println(p);
+      }
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

@@ -11,9 +11,9 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.default_schema">pro_hibernate3_db</property>
     <property name="show_sql">true</property>
-    
-    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.Advert"/>
-    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.PersonalAdvert"/>
-    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.PropertyAdvert"/>
+
+    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.Advert" />
+    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.PersonalAdvert" />
+    <mapping class="edu.buet.cse.hibernate.ch06.v5.model.PropertyAdvert" />
   </session-factory>
 </hibernate-configuration>

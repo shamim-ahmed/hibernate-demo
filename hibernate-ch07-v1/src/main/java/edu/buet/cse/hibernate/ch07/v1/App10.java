@@ -12,22 +12,22 @@ import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App10 {
   public static void main(String... args) {
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Criteria criteria = session.createCriteria(Product.class);
-	  criteria.add(Restrictions.isNotNull("description"));
-	  criteria.add(Restrictions.ilike("name", "m%"));
-	  @SuppressWarnings("unchecked")
-	  List<Product> products = criteria.list();
-	  tx.commit();
+    try {
+      Session session = HibernateUtil.getSession();
 
-	  for (Product p : products) {
-		System.out.println(p);
-	  }	  
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+      Transaction tx = session.beginTransaction();
+      Criteria criteria = session.createCriteria(Product.class);
+      criteria.add(Restrictions.isNotNull("description"));
+      criteria.add(Restrictions.ilike("name", "m%"));
+      @SuppressWarnings("unchecked")
+      List<Product> products = criteria.list();
+      tx.commit();
+
+      for (Product p : products) {
+        System.out.println(p);
+      }
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

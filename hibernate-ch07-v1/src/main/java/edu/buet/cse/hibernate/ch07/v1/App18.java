@@ -12,23 +12,23 @@ import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App18 {
   public static void main(String... args) {
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Criteria supCriteria = session.createCriteria(Supplier.class);
-	  supCriteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
-	  Criteria prodCriteria = supCriteria.createCriteria("products");
-	  prodCriteria.add(Restrictions.le("price", 25.00));
-	  @SuppressWarnings("unchecked")
-	  List<Supplier> suppliers = supCriteria.list();
-	  tx.commit();
-	  
-	  for (Supplier s : suppliers) {
-		System.out.println(s);
-	  }
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+    try {
+      Session session = HibernateUtil.getSession();
+
+      Transaction tx = session.beginTransaction();
+      Criteria supCriteria = session.createCriteria(Supplier.class);
+      supCriteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+      Criteria prodCriteria = supCriteria.createCriteria("products");
+      prodCriteria.add(Restrictions.le("price", 25.00));
+      @SuppressWarnings("unchecked")
+      List<Supplier> suppliers = supCriteria.list();
+      tx.commit();
+
+      for (Supplier s : suppliers) {
+        System.out.println(s);
+      }
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

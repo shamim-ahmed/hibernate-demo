@@ -1,18 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-          
+
 <hibernate-mapping>
-  <subclass name="edu.buet.cse.hibernate.ch06.v6.model.PersonalAdvert" 
-            extends="edu.buet.cse.hibernate.ch06.v6.model.Advert"
-            discriminator-value="personal">      
-    <property name="dateOfBirth" column="birth_date" type="date" not-null="false"/>
+  <subclass name="edu.buet.cse.hibernate.ch06.v6.model.PersonalAdvert" extends="edu.buet.cse.hibernate.ch06.v6.model.Advert"
+    discriminator-value="personal">
+    <property name="dateOfBirth" column="birth_date" type="date" not-null="false" />
     <property name="sex" column="sex" not-null="false">
       <type name="org.hibernate.type.EnumType">
         <param name="enumClass">edu.buet.cse.hibernate.ch06.v6.model.Sex</param>
       </type>
     </property>
-    
-    <property name="message" column="message" type="string" not-null="false"/>
+
+    <property name="message" column="message" type="string" not-null="false" />
   </subclass>
 </hibernate-mapping>

@@ -17,11 +17,12 @@ public class App {
       Query query = session.createQuery("from Supplier");
       @SuppressWarnings("unchecked")
       List<Supplier> suppliers = query.list();
-      tx.commit();
       
       for (Supplier s : suppliers) {
         System.out.println(s);
       }
+      
+      tx.commit();
     } finally {
       HibernateUtil.cleanUp();
     }

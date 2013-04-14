@@ -20,23 +20,23 @@ public abstract class Advert {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
   protected Long id;
-  
+
   @Column(name = "title")
   protected String title;
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getTitle() {
-	return title;
+    return title;
   }
 
   public void setTitle(String title) {
-	this.title = title;
+    this.title = title;
   }
 }

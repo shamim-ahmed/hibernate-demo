@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-          
+
 <hibernate-mapping>
   <class name="edu.buet.cse.hibernate.ch06.v6.model.Advert" table="Advert">
     <id name="id" column="id" type="long">
-      <generator class="increment"/>
+      <generator class="increment" />
     </id>
-    
-    <discriminator column="category" type="string" not-null="true"/>   
-    <property name="title" column="title" type="string" not-null="true"/>
+
+    <discriminator column="category" type="string" not-null="true" />
+    <property name="title" column="title" type="string" not-null="true" />
   </class>
 </hibernate-mapping>

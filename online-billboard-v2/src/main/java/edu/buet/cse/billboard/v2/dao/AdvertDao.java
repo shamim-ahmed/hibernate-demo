@@ -9,76 +9,76 @@ import edu.buet.cse.billboard.v2.util.HibernateUtil;
 
 public class AdvertDao {
   public Advert getAdvert(Long id) {
-	if (id == null) {
-	  return null;
-	}
+    if (id == null) {
+      return null;
+    }
 
-	Advert advert = null;
-	Transaction tx = null;
+    Advert advert = null;
+    Transaction tx = null;
 
-	try {
-	  Session session = HibernateUtil.getSession();
-	  tx = session.beginTransaction();
-	  advert = (Advert) session.get(Advert.class, id);
-	  tx.commit();
-	} catch (HibernateException ex) {
-	  ex.printStackTrace(System.err);
+    try {
+      Session session = HibernateUtil.getSession();
+      tx = session.beginTransaction();
+      advert = (Advert) session.get(Advert.class, id);
+      tx.commit();
+    } catch (HibernateException ex) {
+      ex.printStackTrace(System.err);
 
-	  if (tx != null) {
-		tx.rollback();
-	  }
-	}
+      if (tx != null) {
+        tx.rollback();
+      }
+    }
 
-	return advert;
+    return advert;
   }
 
   public boolean saveAdvert(Advert advert) {
-	if (advert == null) {
-	  return false;
-	}
+    if (advert == null) {
+      return false;
+    }
 
-	boolean result = false;
-	Transaction tx = null;
+    boolean result = false;
+    Transaction tx = null;
 
-	try {
-	  Session session = HibernateUtil.getSession();
-	  tx = session.beginTransaction();
-	  session.save(advert);
-	  tx.commit();
-	  result = true;
-	} catch (HibernateException ex) {
-	  ex.printStackTrace(System.err);
+    try {
+      Session session = HibernateUtil.getSession();
+      tx = session.beginTransaction();
+      session.save(advert);
+      tx.commit();
+      result = true;
+    } catch (HibernateException ex) {
+      ex.printStackTrace(System.err);
 
-	  if (tx != null) {
-		tx.rollback();
-	  }
-	}
+      if (tx != null) {
+        tx.rollback();
+      }
+    }
 
-	return result;
+    return result;
   }
 
   public boolean deleteAdvert(Advert advert) {
-	if (advert == null) {
-	  return false;
-	}
+    if (advert == null) {
+      return false;
+    }
 
-	boolean result = false;
-	Transaction tx = null;
+    boolean result = false;
+    Transaction tx = null;
 
-	try {
-	  Session session = HibernateUtil.getSession();
-	  tx = session.beginTransaction();
-	  session.delete(advert);
-	  tx.commit();
-	  result = true;
-	} catch (HibernateException ex) {
-	  ex.printStackTrace(System.err);
+    try {
+      Session session = HibernateUtil.getSession();
+      tx = session.beginTransaction();
+      session.delete(advert);
+      tx.commit();
+      result = true;
+    } catch (HibernateException ex) {
+      ex.printStackTrace(System.err);
 
-	  if (tx != null) {
-		tx.rollback();
-	  }
-	}
+      if (tx != null) {
+        tx.rollback();
+      }
+    }
 
-	return result;
+    return result;
   }
 }

@@ -12,37 +12,35 @@ public class Supplier {
   private Set<Product> products = new HashSet<>();
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getName() {
-	return name;
+    return name;
   }
 
   public void setName(String name) {
-	this.name = name;
+    this.name = name;
   }
 
   public Set<Product> getProducts() {
-	return products;
+    return products;
   }
 
   public void setProducts(Set<Product> products) {
-	this.products = products;
+    this.products = products;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("name", name)
-	       .append("productCount", products.size());
-	
-	return builder.toString();
-		
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("name", name).append("productCount", products.size());
+
+    return builder.toString();
+
   }
 }

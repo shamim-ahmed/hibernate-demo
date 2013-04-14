@@ -5,17 +5,17 @@
 <hibernate-mapping>
   <class name="edu.buet.cse.hibernate.ch07.v1.model.Supplier" table="Supplier">
     <id name="id" column="id" type="long">
-      <generator class="increment"/>
+      <generator class="increment" />
     </id>
-    
-    <property name="name" column="name" type="string" not-null="true"/>
-    
+
+    <property name="name" column="name" type="string" not-null="true" />
+
     <set name="products" cascade="all">
       <key>
-        <column name="sup_id"/>
+        <column name="sup_id" />
       </key>
-      
-      <one-to-many class="edu.buet.cse.hibernate.ch07.v1.model.Product"/>
+
+      <one-to-many class="edu.buet.cse.hibernate.ch07.v1.model.Product" />
     </set>
   </class>
 </hibernate-mapping>

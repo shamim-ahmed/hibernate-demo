@@ -7,23 +7,19 @@ public class Software extends Product {
   private String version;
 
   public String getVersion() {
-	return version;
+    return version;
   }
 
   public void setVersion(String version) {
-	this.version = version;
+    this.version = version;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", getId())
-	       .append("name", getName())
-	       .append("description", getDescription())
-	       .append("price", getPrice())
-	       .append("supplierName", getSupplier().getName())
-	       .append("version", getVersion());
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", getId()).append("name", getName()).append("description", getDescription())
+        .append("price", getPrice()).append("supplierName", getSupplier().getName()).append("version", getVersion());
+
+    return builder.toString();
   }
 }

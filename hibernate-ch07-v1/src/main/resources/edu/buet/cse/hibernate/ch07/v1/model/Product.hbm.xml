@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-          
+
 <hibernate-mapping>
   <class name="edu.buet.cse.hibernate.ch07.v1.model.Product" table="Product">
     <id name="id" column="id" type="long">
-      <generator class="increment"/>
+      <generator class="increment" />
     </id>
-    
-    <property name="name" column="name" type="string" not-null="true"/>
-    <property name="description" column="description" type="string" not-null="false"/>
-    <property name="price" column="price" type="double" not-null="true"/>
-    
+
+    <property name="name" column="name" type="string" not-null="true" />
+    <property name="description" column="description" type="string" not-null="false" />
+    <property name="price" column="price" type="double" not-null="true" />
+
     <many-to-one name="supplier" class="edu.buet.cse.hibernate.ch07.v1.model.Supplier">
-      <column name="sup_id" not-null="true"/>
+      <column name="sup_id" not-null="true" />
     </many-to-one>
-   </class>
+  </class>
 </hibernate-mapping>

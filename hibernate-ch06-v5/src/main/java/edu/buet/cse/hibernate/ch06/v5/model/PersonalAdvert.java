@@ -17,46 +17,43 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class PersonalAdvert extends Advert {
   @Column(name = "birth_date", nullable = false)
   private Date dateOfBirth;
-  
+
   @Column(name = "sex", nullable = false)
   private Sex sex;
-  
+
   @Column(name = "message", nullable = true)
   private String message;
 
   public Date getDateOfBirth() {
-	return dateOfBirth;
+    return dateOfBirth;
   }
 
   public void setDateOfBirth(Date dateOfBirth) {
-	this.dateOfBirth = dateOfBirth;
+    this.dateOfBirth = dateOfBirth;
   }
 
   public Sex getSex() {
-	return sex;
+    return sex;
   }
 
   public void setSex(Sex sex) {
-	this.sex = sex;
+    this.sex = sex;
   }
 
   public String getMessage() {
-	return message;
+    return message;
   }
 
   public void setMessage(String message) {
-	this.message = message;
+    this.message = message;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("title", title)
-	       .append("dateOfBirth", dateOfBirth)
-	       .append("sex", sex)
-	       .append("message", message);
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("title", title).append("dateOfBirth", dateOfBirth).append("sex", sex)
+        .append("message", message);
+
+    return builder.toString();
   }
 }

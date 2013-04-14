@@ -11,54 +11,51 @@ public class Product {
   private Supplier supplier;
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getName() {
-	return name;
+    return name;
   }
 
   public void setName(String name) {
-	this.name = name;
+    this.name = name;
   }
 
   public String getDescription() {
-	return description;
+    return description;
   }
 
   public void setDescription(String description) {
-	this.description = description;
+    this.description = description;
   }
 
   public double getPrice() {
-	return price;
+    return price;
   }
 
   public void setPrice(double price) {
-	this.price = price;
+    this.price = price;
   }
 
   public Supplier getSupplier() {
-	return supplier;
+    return supplier;
   }
 
   public void setSupplier(Supplier supplier) {
-	this.supplier = supplier;
+    this.supplier = supplier;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("name", name)
-	       .append("description", description)
-	       .append("price", price)
-	       .append("supplierName", supplier.getName());
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("name", name).append("description", description).append("price", price)
+        .append("supplierName", supplier.getName());
+
+    return builder.toString();
   }
 }

@@ -23,28 +23,28 @@ public class Publisher {
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
+
   @Column(name = "name")
   private String name;
-  
+
   @OneToMany(mappedBy = "publisher")
   @Cascade(value = CascadeType.SAVE_UPDATE)
   private Set<Book> books = new HashSet<>();
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getName() {
-	return name;
+    return name;
   }
 
   public void setName(String name) {
-	this.name = name;
+    this.name = name;
   }
 
   public Set<Book> getBooks() {
@@ -54,14 +54,12 @@ public class Publisher {
   public void setBooks(Set<Book> books) {
     this.books = books;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("name", name)
-	       .append("bookCount", books.size());
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("name", name).append("bookCount", books.size());
+
+    return builder.toString();
   }
 }

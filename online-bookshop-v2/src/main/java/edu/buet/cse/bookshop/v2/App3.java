@@ -6,12 +6,12 @@ import edu.buet.cse.bookshop.v2.util.HibernateUtil;
 
 public class App3 {
   public static void main(String... args) {
-	try {
-	  AuthorDao dao = new AuthorDao();
-	  Author author = dao.getAuthor(1L);
-	  System.out.println(author);
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+    try {
+      AuthorDao dao = new AuthorDao();
+      Author author = dao.getAuthor(1L);
+      System.out.println(author);
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

@@ -25,42 +25,40 @@ public class Author {
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
+
   @Column(name = "first_name", nullable = false)
   private String firstName;
-  
+
   @Column(name = "last_name", nullable = false)
   private String lastName;
-  
+
   @ManyToMany
   @Cascade(CascadeType.SAVE_UPDATE)
-  @JoinTable(name = "Book_Author", 
-             joinColumns = {@JoinColumn(name = "author_id", nullable = false)},
-             inverseJoinColumns = {@JoinColumn(name = "book_id", nullable = false)})
+  @JoinTable(name = "Book_Author", joinColumns = { @JoinColumn(name = "author_id", nullable = false) }, inverseJoinColumns = { @JoinColumn(name = "book_id", nullable = false) })
   private Set<Book> books = new HashSet<>();
 
   public Long getId() {
-	return id;
+    return id;
   }
 
   public void setId(Long id) {
-	this.id = id;
+    this.id = id;
   }
 
   public String getFirstName() {
-	return firstName;
+    return firstName;
   }
 
   public void setFirstName(String firstName) {
-	this.firstName = firstName;
+    this.firstName = firstName;
   }
 
   public String getLastName() {
-	return lastName;
+    return lastName;
   }
 
   public void setLastName(String lastName) {
-	this.lastName = lastName;
+    this.lastName = lastName;
   }
 
   public Set<Book> getBooks() {
@@ -70,15 +68,13 @@ public class Author {
   public void setBooks(Set<Book> books) {
     this.books = books;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("id", id)
-	       .append("firstName", firstName)
-	       .append("lastName", lastName)
-	       .append("bookCount", books.size());
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("id", id).append("firstName", firstName).append("lastName", lastName)
+        .append("bookCount", books.size());
 
-	return builder.toString();
+    return builder.toString();
   }
 }

@@ -7,17 +7,17 @@ import edu.buet.cse.hibernate.ch07.v1.model.Supplier;
 import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
 public class App {
-  public static void main(String[] args) {	
-	try {
-	  Session session = HibernateUtil.getSession();
-	  
-	  Transaction tx = session.beginTransaction();
-	  Supplier supplier = (Supplier) session.get(Supplier.class, 1L);
-	  tx.commit();
+  public static void main(String[] args) {
+    try {
+      Session session = HibernateUtil.getSession();
 
-	  System.out.println(supplier);
-	} finally {
-	  HibernateUtil.cleanUp();
-	}
+      Transaction tx = session.beginTransaction();
+      Supplier supplier = (Supplier) session.get(Supplier.class, 1L);
+      tx.commit();
+
+      System.out.println(supplier);
+    } finally {
+      HibernateUtil.cleanUp();
+    }
   }
 }

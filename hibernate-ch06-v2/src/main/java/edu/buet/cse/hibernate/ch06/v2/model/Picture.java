@@ -10,32 +10,31 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class Picture {
   @Column(name = "pictureCaption", nullable = false)
   private String caption;
-  
+
   @Column(name = "pictureFileName", nullable = false)
   private String fileName;
 
   public String getCaption() {
-	return caption;
+    return caption;
   }
 
   public void setCaption(String caption) {
-	this.caption = caption;
+    this.caption = caption;
   }
 
   public String getFileName() {
-	return fileName;
+    return fileName;
   }
 
   public void setFileName(String fileName) {
-	this.fileName = fileName;
+    this.fileName = fileName;
   }
-  
+
   @Override
   public String toString() {
-	ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
-	builder.append("caption", caption)
-	       .append("fileName", fileName);
-	
-	return builder.toString();
+    ToStringBuilder builder = new ToStringBuilder(this, ToStringStyle.MULTI_LINE_STYLE);
+    builder.append("caption", caption).append("fileName", fileName);
+
+    return builder.toString();
   }
 }
