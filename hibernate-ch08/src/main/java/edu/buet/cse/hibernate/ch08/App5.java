@@ -6,21 +6,23 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.hibernate.ch08.model.Supplier;
+import edu.buet.cse.hibernate.ch08.model.Product;
 import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
-// basic HQL example
-public class App {
+// example of using named parameters in HQL
+public class App5 {
   public static void main(String... args) {
     try {
       Session session = HibernateUtil.getSession();
       Transaction tx = session.beginTransaction();
-      Query query = session.createQuery("from Supplier");
+      String hql = "from Product p where p.name = :name";
+      Query query = session.createQuery(hql);
+      query.setString("name", "Mouse");
       @SuppressWarnings("unchecked")
-      List<Supplier> suppliers = query.list();
+      List<Product> products = query.list();
       
-      for (Supplier s : suppliers) {
-        System.out.println(s);
+      for (Product p : products) {
+        System.out.println(p);
       }
       
       tx.commit();
