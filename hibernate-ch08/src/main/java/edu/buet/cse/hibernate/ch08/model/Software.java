@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch08.v1.model;
+package edu.buet.cse.hibernate.ch08.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

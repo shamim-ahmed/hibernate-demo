@@ -3,7 +3,7 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <class name="edu.buet.cse.hibernate.ch08.v1.model.Supplier" table="Supplier">
+  <class name="edu.buet.cse.hibernate.ch08.model.Supplier" table="Supplier">
     <id name="id" column="id" type="long">
       <generator class="increment" />
     </id>
@@ -15,7 +15,7 @@
         <column name="sup_id" />
       </key>
 
-      <one-to-many class="edu.buet.cse.hibernate.ch08.v1.model.Product" />
+      <one-to-many class="edu.buet.cse.hibernate.ch08.model.Product" />
     </set>
   </class>
 </hibernate-mapping>

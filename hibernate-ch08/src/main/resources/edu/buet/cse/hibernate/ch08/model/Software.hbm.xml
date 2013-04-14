@@ -3,7 +3,7 @@
           "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  <joined-subclass name="edu.buet.cse.hibernate.ch08.v1.model.Software" extends="edu.buet.cse.hibernate.ch08.v1.model.Product"
+  <joined-subclass name="edu.buet.cse.hibernate.ch08.model.Software" extends="edu.buet.cse.hibernate.ch08.model.Product"
     table="Software">
     <key>
       <column name="id" />

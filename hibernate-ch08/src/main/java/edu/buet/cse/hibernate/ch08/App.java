@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch08.v1;
+package edu.buet.cse.hibernate.ch08;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.hibernate.ch08.v1.model.Supplier;
-import edu.buet.cse.hibernate.ch08.v1.util.HibernateUtil;
+import edu.buet.cse.hibernate.ch08.model.Supplier;
+import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
 public class App {
   public static void main(String... args) {

@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch08.v1.model;
+package edu.buet.cse.hibernate.ch08.model;
 
 import java.util.HashSet;
 import java.util.Set;

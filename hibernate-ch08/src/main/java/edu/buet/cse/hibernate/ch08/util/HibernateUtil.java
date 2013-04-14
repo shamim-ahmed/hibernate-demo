@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch08.v1.util;
+package edu.buet.cse.hibernate.ch08.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

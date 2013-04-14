@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.buet.cse</groupId>
-  <artifactId>hibernate-ch08-v1</artifactId>
+  <artifactId>hibernate-ch08</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>hibernate-ch08-v1</name>
+  <name>hibernate-ch08</name>
   <url>http://maven.apache.org</url>
   <description>This project demonstrates how to use Hibernate Query Language(HQL).</description>
 
