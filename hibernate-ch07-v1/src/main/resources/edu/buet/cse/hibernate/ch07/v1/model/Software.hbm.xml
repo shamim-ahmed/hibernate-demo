@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+  <joined-subclass name="edu.buet.cse.hibernate.ch07.v1.model.Software"
+                   extends="edu.buet.cse.hibernate.ch07.v1.model.Product"
+                   table="Software">
+    <key>
+      <column name="id"/>
+    </key>
+    
+    <property name="version" column="version" type="string" not-null="true"/>
+  </joined-subclass>
+</hibernate-mapping>
