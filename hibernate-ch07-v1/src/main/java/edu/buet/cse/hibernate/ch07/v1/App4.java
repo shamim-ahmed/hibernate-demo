@@ -1,21 +1,28 @@
 package edu.buet.cse.hibernate.ch07.v1;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import edu.buet.cse.hibernate.ch07.v1.model.Product;
+import edu.buet.cse.hibernate.ch07.v1.model.Software;
 import edu.buet.cse.hibernate.ch07.v1.util.HibernateUtil;
 
-public class App2 {
+public class App4 {
   public static void main(String... args) {
 	try {
 	  Session session = HibernateUtil.getSession();
 	  
 	  Transaction tx = session.beginTransaction();
-	  Product product = (Product) session.get(Product.class, 1L);
+	  Criteria criteria = session.createCriteria(Software.class);
+	  @SuppressWarnings("unchecked")
+	  List<Software> softwares = criteria.list();
 	  tx.commit();
 
-	  System.out.println(product);
+	  for (Software s : softwares) {
+		System.out.println(s);
+	  }	  
 	} finally {
 	  HibernateUtil.cleanUp();
 	}

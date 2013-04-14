@@ -21,6 +21,7 @@ public class Software extends Product {
 	       .append("name", getName())
 	       .append("description", getDescription())
 	       .append("price", getPrice())
+	       .append("supplierName", getSupplier().getName())
 	       .append("version", getVersion());
 	
 	return builder.toString();

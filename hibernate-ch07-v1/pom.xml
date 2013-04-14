@@ -7,7 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>hibernate-intro</name>
+  <name>hibernate-ch07-v1</name>
   <url>http://maven.apache.org</url>
   <description>This project demonstrates how to use the Criteria API.</description>
 

@@ -13,8 +13,9 @@ public class App {
 	  
 	  Transaction tx = session.beginTransaction();
 	  Supplier supplier = (Supplier) session.get(Supplier.class, 1L);
-	  System.out.println(supplier);
 	  tx.commit();
+
+	  System.out.println(supplier);
 	} finally {
 	  HibernateUtil.cleanUp();
 	}
