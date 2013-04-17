@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+                                  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pro_hibernate3_db</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">admin</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.default_schema">pro_hibernate3_db</property>
+    <property name="show_sql">true</property>
+    <!-- cache specific properties -->
+    <property name="hibernate.cache.use_second_level_cache">true</property>
+    <property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+    <property name="hibernate.cache.use_query_cache">true</property>
+    <!-- this one is important for generating statistics -->
+    <property name="hibernate.generate_statistics">true</property>
+
+    <mapping class="edu.buet.cse.hibernate.ch09.model.Employee"/>
+    <mapping class="edu.buet.cse.hibernate.ch09.model.Address"/>
+    <mapping class="edu.buet.cse.hibernate.ch09.model.Department"/>
+  </session-factory>
+</hibernate-configuration>

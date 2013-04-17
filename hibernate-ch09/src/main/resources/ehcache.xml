@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache>
+  <diskStore path="java.io.tmpdir"/>
+  
+  <!-- default cache config -->
+  <defaultCache maxElementsInMemory="10000" 
+                eternal="false"
+                timeToIdleSeconds="120" 
+                timeToLiveSeconds="120" 
+                overflowToDisk="true"
+                diskSpoolBufferSizeMB="30" 
+                maxElementsOnDisk="10000000"
+                diskPersistent="false" 
+                diskExpiryThreadIntervalSeconds="120"
+                memoryStoreEvictionPolicy="LRU" />
+  
+  <!-- cache config for various entities -->
+  <cache name="edu.buet.cse.hibernate.ch09.model.Employee"
+         maxElementsInMemory="10000"
+         eternal="false"
+         timeToIdleSeconds="300"
+         timeToLiveSeconds="600"
+         overflowToDisk="true"/>
+         
+  <cache name="edu.buet.cse.hibernate.ch09.model.Department"
+         maxElementsInMemory="10000"
+         eternal="false"
+         timeToIdleSeconds="300"
+         timeToLiveSeconds="600"
+         overflowToDisk="true"/>
+         
+  <cache name="edu.buet.cse.hibernate.ch09.model.Address"
+         maxElementsInMemory="10000"
+         eternal="false"
+         timeToIdleSeconds="300"
+         timeToLiveSeconds="600"
+         overflowToDisk="true"/>
+        
+  <!-- this cache configs are added to get rid of some warning messages --> 
+  <cache name="org.hibernate.cache.UpdateTimestampsCache"
+         maxElementsInMemory="10000"
+         eternal="false"
+         timeToIdleSeconds="300"
+         timeToLiveSeconds="600"
+         overflowToDisk="true"/>
+         
+  <cache name="org.hibernate.cache.StandardQueryCache"
+         maxElementsInMemory="10000"
+         eternal="false"
+         timeToIdleSeconds="300"
+         timeToLiveSeconds="600"
+         overflowToDisk="true"/>
+</ehcache>
