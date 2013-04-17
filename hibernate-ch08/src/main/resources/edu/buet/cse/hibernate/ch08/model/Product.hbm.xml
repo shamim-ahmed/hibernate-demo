@@ -16,4 +16,10 @@
       <column name="sup_id" not-null="true" />
     </many-to-one>
   </class>
+  
+  <query name="edu.buet.cse.hibernate.ch08.model.Product.hqlPrice">
+    <![CDATA[
+      from Product p where p.price <= 25.0
+    ]]>
+  </query>
 </hibernate-mapping>
