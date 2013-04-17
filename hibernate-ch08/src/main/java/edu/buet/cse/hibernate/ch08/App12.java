@@ -7,7 +7,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import edu.buet.cse.hibernate.ch08.model.Product;
-import edu.buet.cse.hibernate.ch08.model.Supplier;
 import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
 public class App12 {
