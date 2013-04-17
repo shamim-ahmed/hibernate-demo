@@ -22,4 +22,10 @@
       from Product p where p.price <= 25.0
     ]]>
   </query>
+  
+  <sql-query name="edu.buet.cse.hibernate.ch08.model.Product.sqlPrice">
+    <![CDATA[
+      SELECT p.name, p.price FROM Product p WHERE p.price <= 25.0
+    ]]>
+  </sql-query>
 </hibernate-mapping>
