@@ -9,6 +9,11 @@ import org.hibernate.Transaction;
 import edu.buet.cse.hibernate.ch08.model.Product;
 import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
+/**
+ * This class demonstrates the use of order by clause in HQL
+ * @author shamim
+ *
+ */
 public class App9 {
   public static void main(String... args) {
     try {

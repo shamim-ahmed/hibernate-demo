@@ -9,6 +9,11 @@ import org.hibernate.Transaction;
 import edu.buet.cse.hibernate.ch08.model.Product;
 import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
+/**
+ * This class demonstrates use of fetch keyword for determining object loading policy
+ * @author shamim
+ *
+ */
 public class App12 {
   public static void main(String... args) {
     try {

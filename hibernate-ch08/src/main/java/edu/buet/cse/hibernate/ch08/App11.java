@@ -10,6 +10,11 @@ import edu.buet.cse.hibernate.ch08.model.Product;
 import edu.buet.cse.hibernate.ch08.model.Supplier;
 import edu.buet.cse.hibernate.ch08.util.HibernateUtil;
 
+/**
+ * This classes demonstrates how to use inner join in HQL to fetch multiple objects
+ * @author shamim
+ *
+ */
 public class App11 {
   public static void main(String... args) {
     try {
