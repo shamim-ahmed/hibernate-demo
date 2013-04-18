@@ -9,7 +9,7 @@
 
   <name>hibernate-ch12-v1</name>
   <url>http://maven.apache.org</url>
-  <description>This project demonstrates how to use Hibernate interceptors</description>
+  <description>This project demonstrates how to use Hibernate filters in conjunction with annotations</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
