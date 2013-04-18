@@ -17,5 +17,9 @@
     <event type="load">
       <listener class="edu.buet.cse.hibernate.ch11.v2.listener.BookingLoadListener"/>
     </event>
+    
+    <event type="delete">
+      <listener class="edu.buet.cse.hibernate.ch11.v2.listener.BookingDeleteListener"/>
+    </event>
   </session-factory>
 </hibernate-configuration>
