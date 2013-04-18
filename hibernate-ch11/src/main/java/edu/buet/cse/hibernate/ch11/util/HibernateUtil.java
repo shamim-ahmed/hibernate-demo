@@ -5,13 +5,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import edu.buet.cse.hibernate.ch11.interceptor.BookingInterceptor;
+
 public class HibernateUtil {
   private static final SessionFactory sessionFactory;
   private static final Session session;
   
   static {
     try {
-      sessionFactory = new Configuration().configure().buildSessionFactory();
+      Configuration config = new Configuration();
+      config.setInterceptor(new BookingInterceptor());
+      sessionFactory = config.configure().buildSessionFactory();
       session = sessionFactory.openSession();
     } catch (HibernateException ex) {
       ex.printStackTrace(System.err);
