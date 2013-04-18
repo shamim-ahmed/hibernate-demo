@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch12.util;
+package edu.buet.cse.hibernate.ch12.v1.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

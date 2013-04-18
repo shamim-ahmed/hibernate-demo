@@ -12,6 +12,6 @@
     <property name="hibernate.default_schema">pro_hibernate3_db</property>
     <property name="show_sql">true</property>
     
-    <mapping class="edu.buet.cse.hibernate.ch12.model.User"/>
+    <mapping class="edu.buet.cse.hibernate.ch12.v1.model.User"/>
   </session-factory>
 </hibernate-configuration>
