@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch11.interceptor;
+package edu.buet.cse.hibernate.ch11.v1.interceptor;
 
 import java.io.Serializable;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package edu.buet.cse.hibernate.ch11.model;
+package edu.buet.cse.hibernate.ch11.v1.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,11 +1,11 @@
-package edu.buet.cse.hibernate.ch11.util;
+package edu.buet.cse.hibernate.ch11.v1.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import edu.buet.cse.hibernate.ch11.interceptor.BookingInterceptor;
+import edu.buet.cse.hibernate.ch11.v1.interceptor.BookingInterceptor;
 
 public class HibernateUtil {
   private static final SessionFactory sessionFactory;
