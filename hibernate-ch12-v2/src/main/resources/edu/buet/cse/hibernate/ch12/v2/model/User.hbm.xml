@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+          
+<hibernate-mapping>
+  <class name="edu.buet.cse.hibernate.ch12.v2.model.User" table="User">
+    <id name="id" column="id" type="long">
+      <generator class="increment"/>
+    </id>
+    
+    <property name="username" column="username" type="string" not-null="true"/>
+    <property name="activated" column="activated" type="boolean" not-null="true"/>
+    
+    <filter name="activationFilter" condition=":activatedParam = activated"/>
+  </class>
+  
+  <filter-def name="activationFilter">
+    <filter-param name="activatedParam" type="boolean"/>
+  </filter-def>
+</hibernate-mapping>
